@@ -1,0 +1,13 @@
+package com.rooter.carportv8;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Carportv8Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Carportv8Application.class, args);
+	}
+
+}

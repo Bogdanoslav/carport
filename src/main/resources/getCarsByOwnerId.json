@@ -1,0 +1,59 @@
+{
+  "_embedded": {
+    "carList": [
+      {
+        "id": 1,
+        "color": "RED",
+        "bodyType": "COUPE",
+        "model": {
+          "id": 1,
+          "name": "X3",
+          "brand": {
+            "id": 1,
+            "name": "BMW"
+          }
+        },
+        "modelId": 1,
+        "ownerId": 1,
+        "status": "ACTIVE",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/cars/1"
+          },
+          "cars": {
+            "href": "http://localhost:8080/cars"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "color": "WHITE",
+        "bodyType": "SEDAN",
+        "model": {
+          "id": 2,
+          "name": "X4",
+          "brand": {
+            "id": 1,
+            "name": "BMW"
+          }
+        },
+        "modelId": 2,
+        "ownerId": 1,
+        "status": "ACTIVE",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/cars/2"
+          },
+          "cars": {
+            "href": "http://localhost:8080/cars"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/cars"
+    }
+  }
+}

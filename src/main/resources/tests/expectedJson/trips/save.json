@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "departureAddress": {
+    "id": 14,
+    "city": "Lviv",
+    "address": "Yaponska str. 42 ",
+    "latitude": 49.833385,
+    "longitude": 24.010845
+  },
+  "arrivalAddress": {
+    "id": 13,
+    "city": "Kyiv",
+    "address": "Heroiv Stalingrada str. 25 ",
+    "latitude": 50.519432,
+    "longitude": 30.513256
+  },
+  "carId": 1,
+  "departureTime": "2023-10-01T06:00:00",
+  "arrivalTime": "2023-11-01T18:00:00",
+  "about": "test ride 1",
+  "totalSeats": 3,
+  "price": 250.00,
+  "status": "SCHEDULED",
+  "instantBooking": false,
+  "createdAt": "2022-09-09T10:26:46.4759312"
+}

@@ -10,6 +10,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "car_model")
@@ -20,8 +21,12 @@ public class CarModel extends CatalogueEntity{
     @JoinColumn(name = "brand_id")
     private CarBrand brand;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "model")
-    List<Car> cars;
+    @JsonIgnore
+    Set<Car> cars;
 
+    public CarModel(String name, CarBrand brand) {
+        super(name);
+        this.brand = brand;
+    }
 }

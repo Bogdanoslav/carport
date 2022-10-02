@@ -16,6 +16,7 @@ public class JwtUtils {
     private String jwtSecret;
     @Value("${carport.app.jwtExpirationMs}")
     private int jwtExpirationMs;
+
     public String generateJwtToken(Authentication authentication) {
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
         return Jwts.builder()

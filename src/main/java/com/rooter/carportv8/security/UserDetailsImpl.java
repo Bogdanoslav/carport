@@ -1,7 +1,6 @@
 package com.rooter.carportv8.security;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.rooter.carportv8.model.User;
+import com.rooter.carportv8.model.UserCredentials;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
@@ -10,29 +9,28 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @ToString(exclude = "password")
 public class UserDetailsImpl implements UserDetails {
     private Long id;
     private String username;
-    private String email;
     private String password;
-
     private Collection<? extends GrantedAuthority> authorities;
 
-    public static UserDetailsImpl build(User user) {
-        List<GrantedAuthority> authorities = user.getRoles().stream()
-                .map(role -> new SimpleGrantedAuthority(role.getName().name()))
-                .collect(Collectors.toList());
+
+
+    public static UserDetailsImpl build(UserCredentials user) {
+        List<? extends GrantedAuthority> authorities = user.getRoles()
+                .stream()
+                .map(r -> new SimpleGrantedAuthority(r.getName().name())).toList();
         return new UserDetailsImpl(
                 user.getId(),
                 user.getUsername(),
-                user.getEmail(),
                 user.getPassword(),
                 authorities);
     }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -71,9 +69,5 @@ public class UserDetailsImpl implements UserDetails {
 
     public Long getId() {
         return id;
-    }
-
-    public String getEmail() {
-        return email;
     }
 }

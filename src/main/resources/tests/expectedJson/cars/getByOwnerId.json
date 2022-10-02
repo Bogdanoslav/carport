@@ -1,0 +1,83 @@
+{
+  "_embedded": {
+    "getCarList": [
+      {
+        "id": 1,
+        "color": "RED",
+        "bodyType": "COUPE",
+        "brand": {
+          "id": 1,
+          "name": "BMW"
+        },
+        "model": {
+          "id": 1,
+          "name": "X3"
+        },
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/cars/1"
+          },
+          "cars": {
+            "href": "http://localhost:8080/cars"
+          },
+          "owner": {
+            "href": "http://localhost:8080/users/1}"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "color": "WHITE",
+        "bodyType": "SEDAN",
+        "brand": {
+          "id": 1,
+          "name": "BMW"
+        },
+        "model": {
+          "id": 2,
+          "name": "X4"
+        },
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/cars/2"
+          },
+          "cars": {
+            "href": "http://localhost:8080/cars"
+          },
+          "owner": {
+            "href": "http://localhost:8080/users/1}"
+          }
+        }
+      },
+      {
+        "id": 10,
+        "color": "BLACK",
+        "bodyType": "SEDAN",
+        "brand": {
+          "id": 1,
+          "name": "BMW"
+        },
+        "model": {
+          "id": 3,
+          "name": "X5"
+        },
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/cars/10"
+          },
+          "cars": {
+            "href": "http://localhost:8080/cars"
+          },
+          "owner": {
+            "href": "http://localhost:8080/users/1}"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/cars"
+    }
+  }
+}

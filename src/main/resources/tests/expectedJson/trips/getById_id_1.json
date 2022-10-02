@@ -1,0 +1,104 @@
+{
+  "id": 1,
+  "departureAddress": {
+    "id": 1,
+    "city": "Kyiv",
+    "address": "Heroiv Stalingrada str. 25 ",
+    "latitude": 50.519432,
+    "longitude": 30.513256
+  },
+  "arrivalAddress": {
+    "id": 2,
+    "city": "Lviv",
+    "address": "Yaponska str. 42 ",
+    "latitude": 49.833385,
+    "longitude": 24.010845
+  },
+  "car": {
+    "id": 1,
+    "color": "RED",
+    "bodyType": "COUPE",
+    "model": {
+      "id": 1,
+      "name": "X3",
+      "brand": {
+        "id": 1,
+        "name": "BMW"
+      }
+    },
+    "modelId": 1,
+    "ownerId": 1,
+    "status": "ACTIVE"
+  },
+  "carId": 1,
+  "departureTime": "2022-09-01T09:00:00",
+  "arrivalTime": "2022-09-01T21:30:00",
+  "about": "test ride 1 COMPLETED PAST",
+  "totalSeats": 3,
+  "bookedSeats": 2,
+  "price": 450.00,
+  "status": "COMPLETED",
+  "bookings": [
+    {
+      "id": 1,
+      "user": {
+        "id": 4,
+        "username": "user_role2_P",
+        "userDescription": {
+          "id": 2,
+          "email": "user_role2@mail.com",
+          "age": 40,
+          "about": "Test User 2",
+          "deleted": false
+        },
+        "roles": [
+          {
+            "id": 4,
+            "name": "ROLE_PASSENGER"
+          }
+        ],
+        "cars": []
+      },
+      "userId": 4,
+      "tripId": 1,
+      "status": "WAITING",
+      "bookedAt": "2022-08-28T09:00:00"
+    },
+    {
+      "id": 2,
+      "user": {
+        "id": 6,
+        "username": "arcadiy1234_P",
+        "userDescription": {
+          "id": 3,
+          "email": "arcadiy@mail.com",
+          "age": 30,
+          "about": "Arcadiy",
+          "deleted": false
+        },
+        "roles": [
+          {
+            "id": 4,
+            "name": "ROLE_PASSENGER"
+          }
+        ],
+        "cars": []
+      },
+      "userId": 6,
+      "tripId": 1,
+      "status": "APPROVED",
+      "bookedAt": "2022-08-01T08:00:00"
+    }
+  ],
+  "instantBooking": false,
+  "createdAt": "2022-08-25T15:32:00",
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/trips/1"
+    },
+    "trips": {
+      "href": "http://localhost:8080/trips{?search}",
+      "templated": true
+    }
+  }
+}

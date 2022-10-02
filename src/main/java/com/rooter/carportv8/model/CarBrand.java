@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "car_brand")
@@ -19,5 +20,9 @@ import java.util.List;
 public class CarBrand extends CatalogueEntity {
     @JsonIgnore
     @OneToMany(mappedBy = "brand")
-    List<CarModel> models;
+    Set<CarModel> models;
+
+    public CarBrand(String name) {
+        super(name);
+    }
 }
